@@ -1,0 +1,19 @@
+{
+    "name": "ionic-template",
+    "description": "A starter project for Ionic based on John Papa's style guide",
+    "keywords": [
+        "AngularJS",
+        "angular",
+        "ionic",
+        "template",
+        "angularjs-template",
+        "seed",
+        "johnpapa",
+        "styleguide",
+        "node",
+        "express"
+    ],
+    "repository": "https://github.com/pamigomp/ionic-template",
+    "success_url": "/",
+    "addons": []
+}

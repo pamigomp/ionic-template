@@ -1,0 +1,50 @@
+<ion-view view-title="{{$state.current.data.title}}">
+    <ion-content padding = "true">
+        <form name="ContactForm">
+            <div class="list">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Name</span>
+                    <input id="firstName" name="firstName" type="text" data-ng-model="FC.contact.firstName" placeholder="Name" data-ng-class="ContactForm.firstName.$valid ? 'no-errors' : (ContactForm.firstName.$pristine ? '' : 'has-errors')" required />
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Surname</span>
+                    <input id="lastName" name="lastName" type="text" data-ng-model="FC.contact.lastName" placeholder="Surname" data-ng-class="ContactForm.lastName.$valid ? 'no-errors' : (ContactForm.lastName.$pristine ? '' : 'has-errors')" required />
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">E-mail</span>
+                    <input id="email" name="email" type="email" data-ng-model="FC.contact.email" placeholder="E-mail" data-ng-class="ContactForm.email.$valid ? 'no-errors' : (ContactForm.email.$pristine ? '' : 'has-errors')" required />
+                </label>
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        Gender
+                    </div>
+                    <select data-ng-model="FC.contact.gender" required>
+                        <option id="male" value="male">Male</option>
+                        <option id="female" value="female">Female</option>
+                    </select>
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Age</span>
+                    <input id="age" name="age" type="number" min="0" max="150" data-ng-model="FC.contact.age" placeholder="Age" data-ng-class="ContactForm.age.$valid ? 'no-errors' : (ContactForm.age.$pristine ? '' : 'has-errors')" required />
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Note</span>
+                    <textarea id="info" name="info" data-ng-model="FC.contact.info" maxlength="150" rows="4" placeholder="Note" data-ng-class="ContactForm.info.$valid ? 'no-errors' : (ContactForm.info.$pristine ? '' : 'has-errors')" required></textarea>
+                </label>
+            </div>
+        </form>
+
+        <button id="save-btn" data-ng-click="FC.update(FC.contact)" data-ng-disabled="ContactForm.$invalid" class="button button-full button-balanced"><strong>Save</strong></button>
+
+        <div class="card">
+            <div class="item item-text-wrap">
+                <pre>form = {{FC.contact| json}}</pre>
+            </div>
+        </div>
+        <div class="card">
+            <div class="item item-text-wrap">
+                <pre id="contactForm">contactForm = {{FC.contactForm| json}}</pre>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

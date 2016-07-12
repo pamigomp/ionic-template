@@ -1,0 +1,16 @@
+<ion-view view-title="{{$state.current.data.title}}">
+    <ion-content padding="true">
+        <ul class="list">
+            <li id="mountain-name" class="item">
+                Name: <strong>{{::MDC.mountain.mountain}}</strong>
+            </li>
+            <li id="mountain-height" class="item">
+                Height: <strong>{{::MDC.mountain.metres}}</strong>
+            </li>
+            <li id="mountain-country" class="item">
+                Country: <strong>{{::MDC.mountain.country}}</strong>
+            </li>
+            <button id="delete-btn" data-ng-click="MDC.delete(MDC.mountain.id)" class="button button-full button-assertive"><strong>Delete</strong></button>
+        </ul>
+    </ion-content>
+</ion-view>

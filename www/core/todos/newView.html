@@ -1,0 +1,30 @@
+<ion-view view-title="{{$state.current.data.title}}">
+    <ion-content padding = "true">
+        <form name="form" data-ng-submit="TNC.addTodo()">
+            <div class="list">
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Name</span>
+                    <input id="todo-name" name="todoName" type="text" data-ng-model="TNC.formData.newTodo" placeholder="Name of todo" required />
+                </label>
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        Type
+                    </div>
+                    <select id="todo-type" name="todoType" data-ng-model="TNC.formData.type" data-ng-options="value.name for value in TNC.categories" required></select>
+                </label>
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        Estimated time
+                    </div>
+                    <select id="todo-estimated-time" name="todoEstimatedTime" data-ng-model="TNC.formData.estimates" data-ng-options="value + ' h' for value in ([]| rangeTime:9:true)" required></select>
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Date</span>
+                    <input id="todo-date" name="todoDate" type="date" data-ng-model="TNC.formData.date" placeholder="Date" required />
+                </label>
+            </div>
+
+            <button id="add-btn" data-ng-disabled="form.$invalid" class="button button-full button-balanced"><strong>Add</strong></button>
+        </form>
+    </ion-content>
+</ion-view>

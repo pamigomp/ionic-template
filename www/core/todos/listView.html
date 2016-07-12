@@ -1,0 +1,31 @@
+<ion-view view-title="{{$state.current.data.title}}">
+    <ion-nav-buttons class="bar-positive" side="secondary">
+        <div class="buttons">
+            <button id="add-btn" class="button button-icon icon ion-ios-plus-outline" ui-sref="tab.todo-new"></button>
+        </div>
+    </ion-nav-buttons>
+
+    <ion-content padding="true">
+        <div class="list list-inset">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input id="search" type="search" class="form-control" placeholder="Search..." data-ng-model="IC.search">
+            </label>
+        </div>
+
+        <ion-list>
+            <ion-checkbox class="repeat-animation" data-ng-model="todo.done" data-ng-repeat="todo in IC.todos| filter: IC.search">
+                <div class="row">
+                    <div class="col done-{{todo.done}}"><strong>{{todo.title}}</strong></div>
+                </div>
+                <div class="row">
+                    <div class="col col-25 done-{{todo.done}}">({{todo.estimates}}h)</div>
+                    <div class="col col-40 done-{{todo.done}}">{{todo.date| date:"dd/MM/yyyy"}}</div>
+                    <div class="col col-34 done-{{todo.done}} ion-{{todo.type.gico}}"> {{todo.type.name}}</div>
+                </div>
+            </ion-checkbox>
+        </ion-list>
+
+        <button id="delete-btn" data-ng-click="TLC.deleteCompleted()" class="button button-full button-assertive"><strong>Delete completed</strong></button>
+    </ion-content>
+</ion-view>

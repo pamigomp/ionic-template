@@ -1,0 +1,29 @@
+<ion-view view-title="{{$state.current.data.title}}">
+    <ion-nav-buttons class="bar-positive">
+        <div class="buttons">
+            <button class="button button-icon icon ion-ios-minus-outline" data-ng-click="MLC.data.showDelete = !MLC.data.showDelete; MLC.data.showReorder = false"></button>
+        </div>
+        <h1 class="title"></h1>
+        <div class="buttons">
+            <button class="button" data-ng-click="MLC.data.showReorder = !MLC.data.showReorder; MLC.data.showDelete = false">
+                Reorder
+            </button>
+        </div>
+    </ion-nav-buttons>
+
+    <ion-nav-title>
+        {{$state.current.data.title}}
+    </ion-nav-title>
+    <ion-content padding="true">
+        <ion-list show-delete="MLC.data.showDelete" show-reorder="MLC.data.showReorder">
+            <ion-item class="item-icon-right item-remove-animate" data-ng-repeat="mountain in MLC.mountains track by $index" ui-sref="tab.mountain-details({mountainId: mountain.id})">
+                {{$index + 1}}. {{mountain.mountain}}
+                <i class="icon ion-chevron-right"></i>
+                <ion-delete-button class="ion-minus-circled" data-ng-click="MLC.onItemDelete(mountain)">
+                </ion-delete-button>
+                <ion-reorder-button class="ion-navicon" on-reorder="MLC.moveItem(mountain, $fromIndex, $toIndex)">
+                </ion-reorder-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
