@@ -19,7 +19,7 @@
             <ion-item class="item-icon-right item-remove-animate" data-ng-repeat="mountain in MLC.mountains track by $index" ui-sref="tab.mountain-details({mountainId: mountain.id})">
                 {{$index + 1}}. {{mountain.mountain}}
                 <i class="icon ion-chevron-right"></i>
-                <ion-delete-button class="ion-minus-circled" data-ng-click="MLC.onItemDelete(mountain)">
+                <ion-delete-button class="ion-minus-circled" data-ng-click="MLC.deleteItem(mountain.id)">
                 </ion-delete-button>
                 <ion-reorder-button class="ion-navicon" on-reorder="MLC.moveItem(mountain, $fromIndex, $toIndex)">
                 </ion-reorder-button>

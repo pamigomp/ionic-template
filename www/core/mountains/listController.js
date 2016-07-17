@@ -12,15 +12,15 @@
 
         vm.mountains = mountainsService.getAll();
         vm.moveItem = moveItem;
-        vm.onItemDelete = onItemDelete;
+        vm.deleteItem = deleteItem;
 
         function moveItem(mountain, fromIndex, toIndex) {
             vm.mountains.splice(fromIndex, 1);
             vm.mountains.splice(toIndex, 0, mountain);
         }
 
-        function onItemDelete(mountain) {
-            vm.mountains.splice(vm.mountains.indexOf(mountain), 1);
+        function deleteItem(mountainId) {
+            mountainsService.deleteById(mountainId);
         }
     }
 })();
