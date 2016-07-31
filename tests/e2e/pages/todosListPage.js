@@ -3,9 +3,8 @@
 var TodosListPage = function () {
     var addButton = element(by.xpath('//button[@id=\'add-btn\']'));
     var deleteButton = element(by.xpath('//button[@id=\'delete-btn\']'));
-    var panelTitle = element(by.css('.panel-title'));
-    var rowName = '//tr//span[text()=\'%s\']';
-    var rowCheckboxForName = rowName + '//..//..//td[6]//input';
+    var rowName = '//div[@id=\'todo-name\']//strong[normalize-space(text())=\'%s\']';
+    var rowCheckboxForName = rowName + '//ancestor::label//input';
     var searchField = element(by.xpath('//input[@id=\'search\']'));
 
     this.clickAddButton = function () {
@@ -14,10 +13,6 @@ var TodosListPage = function () {
 
     this.clickDeleteButton = function () {
         deleteButton.click();
-    };
-
-    this.getPanelTitle = function () {
-        return panelTitle.getText();
     };
 
     this.getTodosListPage = function () {
@@ -30,7 +25,7 @@ var TodosListPage = function () {
         return row.isPresent();
     };
 
-    this.markRowsAsCompleted = function (name) {
+    this.markRowAsCompleted = function (name) {
         var xpath = rowCheckboxForName.replace('%s', name);
         var row = element(by.xpath(xpath));
         row.click();

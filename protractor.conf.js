@@ -6,7 +6,7 @@ exports.config = {
         'tests/e2e/**/*.js'
     ],
     capabilities: {
-        'browserName': 'firefox'
+        'browserName': 'chrome'
     },
     baseUrl: 'http://localhost:8000/',
     framework: 'jasmine',

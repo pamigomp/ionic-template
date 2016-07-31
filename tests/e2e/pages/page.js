@@ -1,35 +1,27 @@
 /* global by, browser */
 
 var Page = function () {
-    var appTitle = element(by.xpath('//a[@id=\'app-title\']'));
     var appFooter = element(by.xpath('//app-about'));
-    var formPageLink = element(by.xpath('//a[@id=\'form-page-link\']'));
-    var jsonPageLink = element(by.xpath('//a[@id=\'json-page-link\']'));
-    var mountainsListPageLink = element(by.xpath('//a[@id=\'mountains-list-page-link\']'));
-    var todosListPageLink = element(by.xpath('//a[@id=\'todos-list-page-link\']'));
+    var formTab = element(by.xpath('//a//span[text(),\'Form\']/..'));
+    var jsonTab = element(by.xpath('//a//span[text(),\'Json\']/..'));
+    var mountainsTab = element(by.xpath('//a//span[text(),\'Mountains\']/..'));
+    var tabTitle = element(by.xpath('//div[@nav-bar=\'active\']//div[contains(@class, \'title\')]'));
+    var todosTab = element(by.xpath('//a//span[text(),\'Todos\']/..'));
 
-    this.clickAppTitle = function () {
-        appTitle.click();
+    this.clickFormTab = function () {
+        formTab.click();
     };
 
-    this.clickFormPageLink = function () {
-        formPageLink.click();
+    this.clickJsonTab = function () {
+        jsonTab.click();
     };
 
-    this.clickJsonPageLink = function () {
-        jsonPageLink.click();
+    this.clickMountainsListTab = function () {
+        mountainsTab.click();
     };
 
-    this.clickMountainsListPageLink = function () {
-        mountainsListPageLink.click();
-    };
-
-    this.clickTodosPageLink = function () {
-        todosListPageLink.click();
-    };
-
-    this.getAppTitle = function () {
-        return appTitle.getText();
+    this.clickTodosTab = function () {
+        todosTab.click();
     };
 
     this.getAppFooter = function () {
@@ -42,6 +34,10 @@ var Page = function () {
 
     this.getLocation = function () {
         return browser.getLocationAbsUrl();
+    };
+
+    this.getTabTitle = function () {
+        return tabTitle.getText();
     };
 };
 

@@ -5,7 +5,6 @@ var TodosNewPage = function () {
     var dateField = element(by.xpath('//input[@id=\'todo-date\']'));
     var estimatedTimeField = '//select[@id=\'todo-estimated-time\']//option[normalize-space(text())=\'%s\']';
     var nameField = element(by.xpath('//input[@id=\'todo-name\']'));
-    var panelTitle = element(by.css('.panel-title'));
     var typeField = '//select[@id=\'todo-type\']//option[normalize-space(text())=\'%s\']';
 
     this.clickAddButton = function () {
@@ -18,10 +17,6 @@ var TodosNewPage = function () {
 
     this.getTodosNewPage = function () {
         browser.get('index.html#/todos/new');
-    };
-
-    this.getPanelTitle = function () {
-        return panelTitle.getText();
     };
 
     this.typeName = function (todoName) {
@@ -42,9 +37,7 @@ var TodosNewPage = function () {
     };
 
     this.selectDate = function (todoDate) {
-        dateField.clear();
         dateField.sendKeys(todoDate);
-        nameField.click();
     };
 };
 

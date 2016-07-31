@@ -4,20 +4,14 @@ var FormPage = function () {
     var ageField = element(by.xpath('//input[@id=\'age\']'));
     var contactForm = element(by.xpath('//pre[@id=\'contactForm\']'));
     var emailField = element(by.xpath('//input[@id=\'email\']'));
-    var femaleField = element(by.xpath('//input[@id=\'female\']'));
-    var maleField = element(by.xpath('//input[@id=\'male\']'));
+    var genderField = '//select[@id=\'gender\']//option[normalize-space(text())=\'%s\']';
     var nameField = element(by.xpath('//input[@id=\'firstName\']'));
     var noteField = element(by.xpath('//textarea[@id=\'info\']'));
-    var panelTitle = element(by.css('.panel-title'));
     var saveButton = element(by.xpath('//button[@id=\'save-btn\']'));
     var surnameField = element(by.xpath('//input[@id=\'lastName\']'));
 
     this.clickSaveButton = function () {
         saveButton.click();
-    };
-
-    this.getPanelTitle = function () {
-        return panelTitle.getText();
     };
 
     this.getFormPage = function () {
@@ -47,12 +41,10 @@ var FormPage = function () {
         emailField.sendKeys(email);
     };
 
-    this.selectMaleGender = function () {
-        maleField.click();
-    };
-
-    this.selectFemaleGender = function () {
-        femaleField.click();
+    this.selectGender = function (gender) {
+        var xpath = genderField.replace('%s', gender);
+        var option = element(by.xpath(xpath));
+        option.click();
     };
 
     this.typeAge = function (age) {

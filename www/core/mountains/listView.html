@@ -1,11 +1,11 @@
 <ion-view view-title="{{$state.current.data.title}}">
     <ion-nav-buttons class="bar-positive">
         <div class="buttons">
-            <button class="button button-icon icon ion-ios-minus-outline" data-ng-click="MLC.data.showDelete = !MLC.data.showDelete; MLC.data.showReorder = false"></button>
+            <button id="delete-btn" class="button button-icon icon ion-ios-minus-outline" data-ng-click="MLC.data.showDelete = !MLC.data.showDelete; MLC.data.showReorder = false"></button>
         </div>
         <h1 class="title"></h1>
         <div class="buttons">
-            <button class="button" data-ng-click="MLC.data.showReorder = !MLC.data.showReorder; MLC.data.showDelete = false">
+            <button id="reorder-btn" class="button" data-ng-click="MLC.data.showReorder = !MLC.data.showReorder; MLC.data.showDelete = false">
                 Reorder
             </button>
         </div>

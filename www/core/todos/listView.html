@@ -16,7 +16,7 @@
         <ion-list>
             <ion-checkbox class="repeat-animation" data-ng-model="todo.done" data-ng-repeat="todo in IC.todos| filter: IC.search">
                 <div class="row">
-                    <div class="col done-{{todo.done}}"><strong>{{todo.title}}</strong></div>
+                    <div id="todo-name" class="col done-{{todo.done}}"><strong>{{todo.title}}</strong></div>
                 </div>
                 <div class="row">
                     <div class="col col-25 done-{{todo.done}}">({{todo.estimates}}h)</div>

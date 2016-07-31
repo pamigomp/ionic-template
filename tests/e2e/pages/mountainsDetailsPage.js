@@ -1,9 +1,11 @@
 /* global by, browser */
 
 var MountainsDetailsPage = function () {
-    var backButton = element(by.xpath('//button[@id=\'back-btn\']'));
+    var backButton = element(by.xpath('//button[contains(@class,\'back-button\')]'));
     var deleteButton = element(by.xpath('//button[@id=\'delete-btn\']'));
-    var panelTitle = element(by.xpath('//a[@id=\'title\']'));
+    var mountainCountry = element(by.xpath('//li[@id=\'mountain-country\']'));
+    var mountainHeight = element(by.xpath('//li[@id=\'mountain-height\']'));
+    var mountainName = element(by.xpath('//li[@id=\'mountain-name\']'));
 
     this.clickBackButton = function () {
         backButton.click();
@@ -17,8 +19,16 @@ var MountainsDetailsPage = function () {
         browser.get('index.html#/mountains/' + mountainId + '/details');
     };
 
-    this.getPanelTitle = function () {
-        return panelTitle.getText();
+    this.getMountainCountry = function () {
+        return mountainCountry.getText();
+    };
+
+    this.getMountainHeight = function () {
+        return mountainHeight.getText();
+    };
+
+    this.getMountainName = function () {
+        return mountainName.getText();
     };
 };
 
