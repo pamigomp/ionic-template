@@ -15,7 +15,7 @@ before_script:
   
 script:
   - grunt karma:singleRun
-  - grunt protractor
+  - npm run protractor
  
 after_success: 'npm run coveralls'
 
