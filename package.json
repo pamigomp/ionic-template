@@ -36,7 +36,7 @@
     "preupdate-webdriver": "npm install",
     "update-webdriver": "webdriver-manager update",
     "preprotractor": "npm run update-webdriver",
-    "protractor": "grunt protractor"
+    "protractor": "protractor protractor.conf.js"
   },
   "dependencies": {
     "bower": "^1.7.9",
