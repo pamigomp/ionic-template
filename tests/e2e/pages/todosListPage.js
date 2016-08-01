@@ -3,8 +3,8 @@
 var TodosListPage = function () {
     var addButton = element(by.xpath('//button[@id=\'add-btn\']'));
     var deleteButton = element(by.xpath('//button[@id=\'delete-btn\']'));
-    var rowName = '//div[@id=\'todo-name\']//strong[normalize-space(text())=\'%s\']';
-    var rowCheckboxForName = rowName + '//ancestor::label//input';
+    var rowName = '//div//strong[normalize-space(text())=\'%s\']';
+    var rowCheckboxForName = rowName + '//ancestor::label';
     var searchField = element(by.xpath('//input[@id=\'search\']'));
 
     this.clickAddButton = function () {

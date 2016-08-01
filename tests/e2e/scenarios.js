@@ -26,7 +26,7 @@ describe('Ionic Template', function () {
             expect(page.getTabTitle()).toEqual('To-do list');
         });
 
-        xit('should delete completed todos', function () {
+        it('should delete completed todos', function () {
             expect(todosListPage.isRowForNamePresent('Date')).toBeTruthy();
             expect(todosListPage.isRowForNamePresent('Gym')).toBeTruthy();
             expect(todosListPage.isRowForNamePresent('Homework')).toBeTruthy();
@@ -40,7 +40,7 @@ describe('Ionic Template', function () {
             expect(todosListPage.isRowForNamePresent('Gym')).toBeTruthy();
             expect(todosListPage.isRowForNamePresent('Homework')).toBeTruthy();
             expect(todosListPage.isRowForNamePresent('Meeting')).toBeFalsy();
-        }).pend('Need to be fixed. Marking row as completed does not work.');
+        });
 
         it('should filter tasks when user type text into search field', function () {
             var textToSearch = 'Homework';
