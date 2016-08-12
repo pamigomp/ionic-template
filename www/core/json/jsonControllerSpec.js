@@ -25,9 +25,10 @@ describe("JsonController", function () {
 
         expect(vm.json).toEqual([
             {
-                "name": "angularjs-template",
+                "name": "ionic-template",
                 "author": "Michal Pietrzak",
-                "date": "2016-05-23T12:12:12.000000Z"
+                "date": "2016-05-23T12:12:12.000000Z",
+                "version": "1.0.0"
             }
         ]);
     });

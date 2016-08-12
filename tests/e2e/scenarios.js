@@ -10,11 +10,6 @@ describe('Ionic Template', function () {
         expect(page.getLocation()).toEqual('/todos/list');
     });
 
-    xit('should display name, version and author of app in footer ', function () {
-        page.getHomepage();
-        expect(page.getAppFooter()).toEqual('Ionic Template app v0.0.1 by Michal Pietrzak');
-    });
-
     describe('todos list', function () {
         var todosListPage = require('./pages/todosListPage.js');
 
