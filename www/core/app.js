@@ -10,7 +10,6 @@
         'app.mountains.list',
         'app.todos.new',
         'app.todos.list',
-        'app.directives.about',
         'app.filters'
     ]);
 })();

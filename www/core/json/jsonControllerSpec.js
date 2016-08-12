@@ -20,7 +20,7 @@ describe("JsonController", function () {
     });
 
     it("should contain json array - HTTP 200", function () {
-        httpBackend.expectGET("assets/data/data.json").respond("[{\"name\": \"angularjs-template\",\"author\": \"Michal Pietrzak\",\"date\": \"2016-05-23T12:12:12.000000Z\"}]");
+        httpBackend.expectGET("assets/data/data.json").respond("[{\"name\": \"ionic-template\",\"author\": \"Michal Pietrzak\",\"date\": \"2016-05-23T12:12:12.000000Z\", \"version\": \"1.0.0\"}]");
         httpBackend.flush();
 
         expect(vm.json).toEqual([
