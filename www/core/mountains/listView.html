@@ -1,4 +1,4 @@
-<ion-view view-title="{{$state.current.data.title}}">
+<ion-view view-title="List of mountains">
     <ion-nav-buttons class="bar-positive">
         <div class="buttons">
             <button id="delete-btn" class="button button-icon icon ion-ios-minus-outline" data-ng-click="MLC.data.showDelete = !MLC.data.showDelete; MLC.data.showReorder = false"></button>
@@ -11,9 +11,6 @@
         </div>
     </ion-nav-buttons>
 
-    <ion-nav-title>
-        {{$state.current.data.title}}
-    </ion-nav-title>
     <ion-content padding="true">
         <ion-list show-delete="MLC.data.showDelete" show-reorder="MLC.data.showReorder">
             <ion-item class="item-icon-right item-remove-animate" data-ng-repeat="mountain in MLC.mountains track by $index" ui-sref="tab.mountain-details({mountainId: mountain.id})">

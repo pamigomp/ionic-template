@@ -43,9 +43,6 @@
                 })
                 .state('tab.todos-list', {
                     url: 'todos/list',
-                    data: {
-                        title: 'To-do list'
-                    },
                     views: {
                         'tab-todos': {
                             templateUrl: 'core/todos/listView.html',
@@ -56,9 +53,6 @@
                 })
                 .state('tab.todo-new', {
                     url: 'todos/new',
-                    data: {
-                        title: 'New todo'
-                    },
                     views: {
                         'tab-todos': {
                             templateUrl: 'core/todos/newView.html',
@@ -69,9 +63,6 @@
                 })
                 .state('tab.json', {
                     url: 'json',
-                    data: {
-                        title: 'Json'
-                    },
                     views: {
                         'tab-json': {
                             templateUrl: 'core/json/jsonView.html',
@@ -82,9 +73,6 @@
                 })
                 .state('tab.mountains-list', {
                     url: 'mountains/list',
-                    data: {
-                        title: 'List of mountains'
-                    },
                     views: {
                         'tab-mountains': {
                             templateUrl: 'core/mountains/listView.html',
@@ -95,9 +83,6 @@
                 })
                 .state('tab.mountain-details', {
                     url: 'mountains/:mountainId/details',
-                    data: {
-                        title: 'Mountain details'
-                    },
                     views: {
                         'tab-mountains': {
                             templateUrl: 'core/mountains/detailsView.html',
@@ -108,9 +93,6 @@
                 })
                 .state('tab.form', {
                     url: 'form',
-                    data: {
-                        title: 'Form'
-                    },
                     views: {
                         'tab-form': {
                             templateUrl: 'core/form/formView.html',
