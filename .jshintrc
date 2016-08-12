@@ -71,6 +71,7 @@
     "globals": {
         "angular": false,
         "cordova": false,
+        "StatusBar": false,
         "describe": false,
         "it": false,
         "expect": false,

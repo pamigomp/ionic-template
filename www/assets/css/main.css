@@ -10,9 +10,9 @@
 }
 
 .has-errors {
-  border-bottom: 3px solid #B83E2C !important;
+    border-bottom: 3px solid #B83E2C !important;
 }
- 
+
 .no-errors {
-  border-bottom: 3px solid green !important;
+    border-bottom: 3px solid green !important;
 }
