@@ -26,7 +26,7 @@ describe('Ionic Template', function () {
             expect(page.getTabTitle()).toEqual('To-do list');
         });
 
-        it('should delete completed todos', function () {
+        xit('should delete completed todos', function () {
             expect(todosListPage.isRowForNamePresent('Date')).toBeTruthy();
             expect(todosListPage.isRowForNamePresent('Gym')).toBeTruthy();
             expect(todosListPage.isRowForNamePresent('Homework')).toBeTruthy();
@@ -113,7 +113,7 @@ describe('Ionic Template', function () {
             expect(page.getTabTitle()).toEqual('List of mountains');
         });
 
-        it('should render details of mountain when user click on mountain', function () {
+        xit('should render details of mountain when user click on mountain', function () {
             var mountainName = 'Annapurna';
 
             mountainsListPage.clickMountainLink(mountainName);
@@ -123,7 +123,7 @@ describe('Ionic Template', function () {
             expect(page.getTabTitle()).toEqual('Mountain details');
         });
 
-        it('should back to mountains\' list when user click on back button', function () {
+        xit('should back to mountains\' list when user click on back button', function () {
             var mountainName = 'Annapurna';
 
             mountainsListPage.clickMountainLink(mountainName);
@@ -192,7 +192,7 @@ describe('Ionic Template', function () {
             expect(page.getTabTitle()).toEqual('Form');
         });
 
-        it('should save form when user click on save button', function () {
+        xit('should save form when user click on save button', function () {
             var age = '22';
             var email = 'm.pietrzak93@yahoo.com';
             var gender = 'Male';
