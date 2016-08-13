@@ -19,7 +19,8 @@ module.exports = function (grunt) {
                 '!resources/**/*.js',
                 '!build/*.js',
                 '!dist/*.js',
-                '!coverage/**/*.js'
+                '!coverage/**/*.js',
+                '!hooks/**/*.js'
             ]
         },
         jscs: {
@@ -36,7 +37,8 @@ module.exports = function (grunt) {
                 '!resources/**/*.js',
                 '!build/*.js',
                 '!dist/*.js',
-                '!coverage/**/*.js'
+                '!coverage/**/*.js',
+                '!hooks/**/*.js'
             ]
         },
         concat: {
