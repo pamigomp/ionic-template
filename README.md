@@ -6,14 +6,14 @@
 [![Dependency Status](https://gemnasium.com/badges/github.com/pamigomp/ionic-template.svg)](https://gemnasium.com/github.com/pamigomp/ionic-template)
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-This project extends the [starter project](http://github.com/driftyco/ionic-starter-tabs) for ionic apps provided by Ionic team. It also bases on an awesome [John Papa's style guide](https://github.com/johnpapa/angular-styleguide). It is an application template for a typical [AngularJS](http://angularjs.org/) web app. You can use it to quickly bootstrap your angular web app projects and dev environment for these projects.
+This project extends the [starter project](http://github.com/driftyco/ionic-starter-tabs) for ionic apps provided by Ionic team. It also bases on an awesome [John Papa's style guide](https://github.com/johnpapa/angular-styleguide). It is an application template for a typical [Ionic](http://ionicframework.com/) web app. You can use it to quickly bootstrap your angular web app projects and dev environment for these projects.
 
 The template contains a sample Ionic application and is preconfigured to install the Ionic framework and a bunch of development and testing tools for instant web development gratification.
 
 ## Online Demo
 
 You can go to following website, to see app preview:
-https://ionictemplate.herokuapp.com
+https://ionic-template.herokuapp.com
 
 ## Getting Started
 
@@ -56,7 +56,7 @@ cd node_modules/ionic-template
 Firstly, make sure you have bower, grunt-cli and karma-cli installed globally. To do this run:
 
 ```bash
-npm install -g bower grunt-cli karma-cli
+npm install -g bower grunt-cli karma-cli ionic cordova
 ```
 
 We have two kinds of dependencies in this project: tools and angular framework code. The tools help us manage and test the application.
@@ -73,7 +73,7 @@ npm install
 Behind the scenes this will also call `bower install`. You should find that you have two new folders in your project.
 
 * `node_modules` - contains the npm packages for the tools we need
-* `app/bower_components` - contains the angular framework files
+* `www/bower_components` - contains the angular framework files
 
 *Note that the `bower_components` folder would normally be installed in the root folder but ionic-template changes this location through the `.bowerrc` file. Putting it in the app folder makes it easier to serve the files by a webserver.*
 
@@ -90,7 +90,20 @@ Now browse to the app at `http://localhost:8000`.
 ## Directory Layout
 
 ```
-app/                                --> all of the source files for the application
+build/                              --> minified JavaScript files
+coverage/                           --> coverage reports
+dist/                               --> concatenated JavaScript files
+hooks/                              --> Cordova lifecycle hooks
+node_modules/                       --> the npm packages for the tools we need
+platforms/                          --> targeted operating systems
+plugins/                            --> native plugins
+protractor-test-results/            --> e2e tests results
+resources/                          --> placeholder icons and splashscreens
+tests/                              --> tests scenarios
+  e2e/                                  --> end-to-end tests
+  unit/                                 --> unit tests
+unit-test-results/                  --> unit tests results
+www/                                --> all of the source files for the application
   assets/                               --> other application files
     css/                                  --> custom styles
     data/                                 --> custom data
@@ -107,15 +120,6 @@ app/                                --> all of the source files for the applicat
     app.js                                  --> main application module
     app.routes.js                           --> main application routes
   index.html                            --> app layout file (the main html template file of the app)
-build/                              --> minified JavaScript files
-node_modules/                       --> the npm packages for the tools we need
-coverage/                           --> coverage reports
-dist/                               --> concatenated JavaScript files
-protractor-test-results/            --> e2e tests results
-tests/                              --> tests scenarios
-  e2e/                                  --> end-to-end tests
-  unit/                                 --> unit tests
-unit-test-results/                  --> unit tests results
 .bowerrc                            --> bower options file
 .gitignore                          --> git ignore file
 .jscsrc                             --> JSCS options file
@@ -125,6 +129,7 @@ Gruntfile.js                        --> Grunt config file
 Procfile                            --> define command which starts app
 app.json                            --> web application details file
 bower.json                          --> runtime dependencies of the project
+config.xml                          --> Cordova config file
 karma.conf.js                       --> Karma config file (for unit tests)
 package.json                        --> development dependencies of the project
 protractor-conf.js                  --> Protractor config file (for e2e tests)
