@@ -53,7 +53,7 @@ cd node_modules/ionic-template
 
 ### Install Dependencies
 
-Firstly, make sure you have bower, grunt-cli and karma-cli installed globally. To do this run:
+Firstly, make sure you have bower, grunt-cli, karma-cli, ionic and cordova installed globally. To do this run:
 
 ```bash
 npm install -g bower grunt-cli karma-cli ionic cordova
