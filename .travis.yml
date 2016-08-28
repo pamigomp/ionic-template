@@ -22,6 +22,7 @@ after_success: 'npm run coveralls'
 branches:
   only:
     - master
+    - CI_FIX
   
 cache:
   directories:
