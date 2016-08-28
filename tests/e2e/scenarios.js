@@ -28,6 +28,7 @@ describe('Ionic Template', function () {
             expect(todosListPage.isRowForNamePresent('Meeting')).toBeTruthy();
 
             todosListPage.markRowAsCompleted('Date');
+            browser.sleep(2500);
             todosListPage.markRowAsCompleted('Meeting');
             todosListPage.clickDeleteButton();
 
@@ -111,6 +112,7 @@ describe('Ionic Template', function () {
         it('should render details of mountain when user click on mountain', function () {
             var mountainName = 'Annapurna';
 
+            browser.sleep(2500);
             mountainsListPage.clickMountainLink(mountainName);
 
             var mountainsDetailsPage = require('./pages/mountainsDetailsPage.js');
@@ -121,6 +123,7 @@ describe('Ionic Template', function () {
         it('should back to mountains\' list when user click on back button', function () {
             var mountainName = 'Annapurna';
 
+            browser.sleep(2500);
             mountainsListPage.clickMountainLink(mountainName);
 
             var mountainsDetailsPage = require('./pages/mountainsDetailsPage.js');
@@ -134,6 +137,7 @@ describe('Ionic Template', function () {
             var mountainName = 'Annapurna';
 
             mountainsListPage.clickGlobalDeleteButton();
+            browser.sleep(2500);
             mountainsListPage.clickDeleteButtonForMountain(mountainName);
 
             expect(mountainsListPage.isMountainPresent(mountainName)).toBeFalsy();
@@ -143,7 +147,9 @@ describe('Ionic Template', function () {
             var startMountain = 'Mount Everest';
             var endMountain = 'Shishapangma';
 
+            browser.sleep(2500);
             expect(mountainsListPage.getMountainNameForRow(1)).toContain(startMountain);
+            browser.sleep(2500);
             expect(mountainsListPage.getMountainNameForRow(11)).toContain(endMountain);
 
             mountainsListPage.clickReorderButton();
@@ -168,6 +174,7 @@ describe('Ionic Template', function () {
         });
 
         it('should delete mountain from mountains\' list when user click on delete button', function () {
+            browser.sleep(2500);
             mountainsDetailsPage.clickDeleteButton();
 
             var mountainsListPage = require('./pages/mountainsListPage.js');
@@ -204,6 +211,7 @@ describe('Ionic Template', function () {
 
             expect(formPage.isSaveButtonEnabled()).toBeTruthy();
 
+            browser.sleep(2500);
             formPage.clickSaveButton();
 
             expect(formPage.getSavedContactForm()).toContain(note);
