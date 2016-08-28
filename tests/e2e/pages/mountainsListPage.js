@@ -11,21 +11,29 @@ var MountainsListPage = function () {
     this.clickDeleteButtonForMountain = function (mountainName) {
         var xpath = rowDeleteButtonForName.replace('%s', mountainName);
         var deleteButtonForMountain = element(by.xpath(xpath));
-        deleteButtonForMountain.click();
+        if (deleteButtonForMountain.isDisplayed()) {
+            deleteButtonForMountain.click();
+        }
     };
 
     this.clickGlobalDeleteButton = function () {
-        deleteButton.click();
+        if (deleteButton.isDisplayed()) {
+            deleteButton.click();
+        }
     };
 
     this.clickMountainLink = function (mountainName) {
         var xpath = rowName.replace('%s', mountainName);
         var row = element(by.xpath(xpath));
-        row.click();
+        if (row.isDisplayed()) {
+            row.click();
+        }
     };
 
     this.clickReorderButton = function () {
-        reorderButton.click();
+        if (reorderButton.isDisplayed()) {
+            reorderButton.click();
+        }
     };
 
     this.dragAndDropMountain = function (startMountain, endMountain) {

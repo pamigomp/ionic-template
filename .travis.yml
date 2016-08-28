@@ -5,6 +5,7 @@ node_js:
 before_install:
   - npm install bower -g
   - npm install grunt-cli -g
+  - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
   
 before_script:
   - export DISPLAY=:99.0
@@ -15,13 +16,14 @@ before_script:
   
 script:
   - grunt karma:singleRun
-  - npm run protractor
+  - ./node_modules/.bin/protractor protractor.conf.js
  
 after_success: 'npm run coveralls'
 
 branches:
   only:
     - master
+    - CI_FIX
   
 cache:
   directories:

@@ -8,11 +8,15 @@ var MountainsDetailsPage = function () {
     var mountainName = element(by.xpath('//li[@id=\'mountain-name\']'));
 
     this.clickBackButton = function () {
-        backButton.click();
+        if (backButton.isDisplayed()) {
+            backButton.click();
+        }
     };
 
     this.clickDeleteButton = function () {
-        deleteButton.click();
+        if (deleteButton.isDisplayed()) {
+            deleteButton.click();
+        }
     };
 
     this.getMountainsDetailsPage = function (mountainId) {
