@@ -1,86 +1,86 @@
 {
-  "name": "ionic-template",
-  "version": "0.0.1",
-  "description": "A starter project for Ionic based on John Papa's style guide",
-  "keywords": [
-    "AngularJS",
-    "angular",
-    "ionic",
-    "template",
-    "ionic-template",
-    "seed",
-    "johnpapa",
-    "styleguide",
-    "node",
-    "express"
-  ],
-  "homepage": "https://github.com/pamigomp/ionic-template",
-  "bugs": {
-    "url": "https://github.com/pamigomp/ionic-template/issues"
-  },
-  "license": "MIT",
-  "author": "Michal Pietrzak",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/pamigomp/ionic-template.git"
-  },
-  "main": "server.js",
-  "scripts": {
-    "postinstall": "bower install",
-    "prestart": "npm install",
-    "start": "node server.js",
-    "pretest": "npm install",
-    "test": "grunt karma:unit",
-    "coveralls": "cat ./coverage/*/lcov.info | ./node_modules/.bin/coveralls && rm -rf ./coverage",
-    "test-single-run": "grunt karma:singleRun",
-    "preupdate-webdriver": "npm install",
-    "update-webdriver": "webdriver-manager update",
-    "preprotractor": "npm run update-webdriver",
-    "protractor": "./node_modules/.bin/protractor protractor.conf.js"
-  },
-  "dependencies": {
-    "bower": "^1.7.9",
-    "express": "^4.14.0"
-  },
-  "devDependencies": {
-    "bower": "^1.7.9",
-    "coveralls": "^2.11.12",
-    "grunt": "^1.0.1",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-jshint": "^1.0.0",
-    "grunt-contrib-uglify": "^2.0.0",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-jscs": "^3.0.1",
-    "grunt-karma": "^2.0.0",
-    "grunt-protractor-runner": "^3.2.0",
-    "jasmine-core": "^2.4.1",
-    "jasmine-reporters": "^2.2.0",
-    "karma": "^1.1.2",
-    "karma-chrome-launcher": "^1.0.1",
-    "karma-coverage": "^1.1.1",
-    "karma-firefox-launcher": "^1.0.0",
-    "karma-jasmine": "^1.0.2",
-    "karma-junit-reporter": "^1.1.0",
-    "karma-phantomjs-launcher": "^1.0.1",
-    "load-grunt-tasks": "^3.5.0",
-    "phantomjs-prebuilt": "^2.1.9",
-    "protractor": "^4.0.2",
-    "selenium-webdriver": "^2.53.3"
-  },
-  "engines": {
-    "node": "^4.4.6",
-    "npm": "^2.15.5"
-  },
-  "private": false,
-  "cordovaPlugins": [
-    "cordova-plugin-whitelist"
-  ],
-  "cordovaPlatforms": [
-    "android",
-    {
-      "platform": "android",
-      "version": "",
-      "locator": "android"
-    }
-  ]
+    "name": "ionic-template",
+    "version": "0.0.1",
+    "description": "A starter project for Ionic based on John Papa's style guide",
+    "keywords": [
+        "AngularJS",
+        "angular",
+        "ionic",
+        "template",
+        "ionic-template",
+        "seed",
+        "johnpapa",
+        "styleguide",
+        "node",
+        "express"
+    ],
+    "homepage": "https://github.com/pamigomp/ionic-template",
+    "bugs": {
+        "url": "https://github.com/pamigomp/ionic-template/issues"
+    },
+    "license": "MIT",
+    "author": "Michal Pietrzak",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pamigomp/ionic-template.git"
+    },
+    "main": "server.js",
+    "scripts": {
+        "postinstall": "bower install",
+        "prestart": "npm install",
+        "start": "node server.js",
+        "pretest": "npm install",
+        "test": "grunt karma:unit",
+        "coveralls": "cat ./coverage/*/lcov.info | ./node_modules/.bin/coveralls && rm -rf ./coverage",
+        "test-single-run": "grunt karma:singleRun",
+        "preupdate-webdriver": "npm install",
+        "update-webdriver": "webdriver-manager update",
+        "preprotractor": "npm run update-webdriver",
+        "protractor": "./node_modules/.bin/protractor protractor.conf.js"
+    },
+    "dependencies": {
+        "bower": "^1.7.9",
+        "express": "^4.14.0"
+    },
+    "devDependencies": {
+        "bower": "^1.7.9",
+        "coveralls": "^2.11.12",
+        "grunt": "^1.0.1",
+        "grunt-contrib-concat": "^1.0.1",
+        "grunt-contrib-jshint": "^1.0.0",
+        "grunt-contrib-uglify": "^2.0.0",
+        "grunt-contrib-watch": "^1.0.0",
+        "grunt-jscs": "^3.0.1",
+        "grunt-karma": "^2.0.0",
+        "grunt-protractor-runner": "^3.2.0",
+        "jasmine-core": "^2.4.1",
+        "jasmine-reporters": "^2.2.0",
+        "karma": "^1.2.0",
+        "karma-chrome-launcher": "^2.0.0",
+        "karma-coverage": "^1.1.1",
+        "karma-firefox-launcher": "^1.0.0",
+        "karma-jasmine": "^1.0.2",
+        "karma-junit-reporter": "^1.1.0",
+        "karma-phantomjs-launcher": "^1.0.1",
+        "load-grunt-tasks": "^3.5.2",
+        "phantomjs-prebuilt": "^2.1.12",
+        "protractor": "^4.0.4",
+        "selenium-webdriver": "^2.53.3"
+    },
+    "engines": {
+        "node": "^4.4.6",
+        "npm": "^2.15.5"
+    },
+    "private": false,
+    "cordovaPlugins": [
+        "cordova-plugin-whitelist"
+    ],
+    "cordovaPlatforms": [
+        "android",
+        {
+            "platform": "android",
+            "version": "",
+            "locator": "android"
+        }
+    ]
 }
