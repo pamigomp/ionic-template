@@ -8,11 +8,15 @@ var TodosListPage = function () {
     var searchField = element(by.xpath('//input[@id=\'search\']'));
 
     this.clickAddButton = function () {
-        addButton.click();
+        if (addButton.isDisplayed()) {
+            addButton.click();
+        }
     };
 
     this.clickDeleteButton = function () {
-        deleteButton.click();
+        if (deleteButton.isDisplayed()) {
+            deleteButton.click();
+        }
     };
 
     this.getTodosListPage = function () {
@@ -28,7 +32,9 @@ var TodosListPage = function () {
     this.markRowAsCompleted = function (name) {
         var xpath = rowCheckboxForName.replace('%s', name);
         var row = element(by.xpath(xpath));
-        row.click();
+        if (row.isDisplayed()) {
+            row.click();
+        }
     };
 
     this.searchText = function (textToSearch) {

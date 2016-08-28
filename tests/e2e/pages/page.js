@@ -9,19 +9,27 @@ var Page = function () {
     var todosTab = element(by.xpath('//a//span[text(),\'Todos\']/..'));
 
     this.clickFormTab = function () {
-        formTab.click();
+        if (formTab.isDisplayed()) {
+            formTab.click();
+        }
     };
 
     this.clickJsonTab = function () {
-        jsonTab.click();
+        if (jsonTab.isDisplayed()) {
+            jsonTab.click();
+        }
     };
 
     this.clickMountainsListTab = function () {
-        mountainsTab.click();
+        if (mountainsTab.isDisplayed()) {
+            mountainsTab.click();
+        }
     };
 
     this.clickTodosTab = function () {
-        todosTab.click();
+        if (todosTab.isDisplayed()) {
+            todosTab.click();
+        }
     };
 
     this.getAppFooter = function () {

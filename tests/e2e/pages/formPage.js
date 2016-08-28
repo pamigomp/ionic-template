@@ -11,7 +11,9 @@ var FormPage = function () {
     var surnameField = element(by.xpath('//input[@id=\'lastName\']'));
 
     this.clickSaveButton = function () {
-        saveButton.click();
+        if (saveButton.isDisplayed()) {
+            saveButton.click();
+        }
     };
 
     this.getFormPage = function () {
@@ -44,7 +46,9 @@ var FormPage = function () {
     this.selectGender = function (gender) {
         var xpath = genderField.replace('%s', gender);
         var option = element(by.xpath(xpath));
-        option.click();
+        if (option.isDisplayed()) {
+            option.click();
+        }
     };
 
     this.typeAge = function (age) {

@@ -8,7 +8,9 @@ var TodosNewPage = function () {
     var typeField = '//select[@id=\'todo-type\']//option[normalize-space(text())=\'%s\']';
 
     this.clickAddButton = function () {
-        addButton.click();
+        if (addButton.isDisplayed()) {
+            addButton.click();
+        }
     };
 
     this.isAddButtonEnabled = function () {
@@ -27,13 +29,17 @@ var TodosNewPage = function () {
     this.selectType = function (todoType) {
         var xpath = typeField.replace('%s', todoType);
         var option = element(by.xpath(xpath));
-        option.click();
+        if (option.isDisplayed()) {
+            option.click();
+        }
     };
 
     this.selectEstimatedTime = function (todoEstimatedTime) {
         var xpath = estimatedTimeField.replace('%s', todoEstimatedTime);
         var option = element(by.xpath(xpath));
-        option.click();
+        if (option.isDisplayed()) {
+            option.click();
+        }
     };
 
     this.selectDate = function (todoDate) {
