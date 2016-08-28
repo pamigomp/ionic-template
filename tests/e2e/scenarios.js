@@ -1,4 +1,4 @@
-/* global browser, expect */
+/* global it, browser, expect */
 
 'use strict';
 
@@ -21,7 +21,7 @@ describe('Ionic Template', function () {
             expect(page.getTabTitle()).toEqual('To-do list');
         });
 
-        xit('should delete completed todos', function () {
+        it('should delete completed todos', function () {
             expect(todosListPage.isRowForNamePresent('Date')).toBeTruthy();
             expect(todosListPage.isRowForNamePresent('Gym')).toBeTruthy();
             expect(todosListPage.isRowForNamePresent('Homework')).toBeTruthy();
@@ -35,7 +35,7 @@ describe('Ionic Template', function () {
             expect(todosListPage.isRowForNamePresent('Gym')).toBeTruthy();
             expect(todosListPage.isRowForNamePresent('Homework')).toBeTruthy();
             expect(todosListPage.isRowForNamePresent('Meeting')).toBeFalsy();
-        }).pend('Need to be fixed. Test fails on CI.');
+        });
 
         it('should filter tasks when user type text into search field', function () {
             var textToSearch = 'Homework';
@@ -64,7 +64,7 @@ describe('Ionic Template', function () {
             expect(page.getTabTitle()).toEqual('New todo');
         });
 
-        xit('should add new todo when user click on add button', function () {
+        it('should add new todo when user click on add button', function () {
             var todoName = 'Programming!';
             var todoType = 'Science';
             var todoEstimatedTime = '6 h';
@@ -82,7 +82,7 @@ describe('Ionic Template', function () {
             var todosListPage = require('./pages/todosListPage.js');
 
             expect(todosListPage.isRowForNamePresent(todoName)).toBeTruthy();
-        }).pend('Need to be fixed. Test fails on Firefox.');
+        });
     });
 
     describe('json', function () {
@@ -108,7 +108,7 @@ describe('Ionic Template', function () {
             expect(page.getTabTitle()).toEqual('List of mountains');
         });
 
-        xit('should render details of mountain when user click on mountain', function () {
+        it('should render details of mountain when user click on mountain', function () {
             var mountainName = 'Annapurna';
 
             mountainsListPage.clickMountainLink(mountainName);
@@ -116,9 +116,9 @@ describe('Ionic Template', function () {
             var mountainsDetailsPage = require('./pages/mountainsDetailsPage.js');
 
             expect(page.getTabTitle()).toEqual('Mountain details');
-        }).pend('Need to be fixed. Test fails on CI.');
+        });
 
-        xit('should back to mountains\' list when user click on back button', function () {
+        it('should back to mountains\' list when user click on back button', function () {
             var mountainName = 'Annapurna';
 
             mountainsListPage.clickMountainLink(mountainName);
@@ -128,18 +128,18 @@ describe('Ionic Template', function () {
             mountainsDetailsPage.clickBackButton();
 
             expect(page.getLocation()).toEqual('/mountains/list');
-        }).pend('Need to be fixed. Test fails on CI.');
+        });
 
-        xit('should delete mountain when user click on delete button', function () {
+        it('should delete mountain when user click on delete button', function () {
             var mountainName = 'Annapurna';
 
             mountainsListPage.clickGlobalDeleteButton();
             mountainsListPage.clickDeleteButtonForMountain(mountainName);
 
             expect(mountainsListPage.isMountainPresent(mountainName)).toBeFalsy();
-        }).pend('Need to be fixed. Test fails on Firefox.');
+        });
 
-        xit('should reorder mountains when user drag and drop mountain', function () {
+        it('should reorder mountains when user drag and drop mountain', function () {
             var startMountain = 'Mount Everest';
             var endMountain = 'Shishapangma';
 
@@ -150,7 +150,7 @@ describe('Ionic Template', function () {
             mountainsListPage.dragAndDropMountain(startMountain, endMountain);
 
             expect(mountainsListPage.getMountainNameForRow(11)).toContain(startMountain);
-        }).pend('Need to be fixed. Test fails on Chrome.');
+        });
     });
 
     describe('mountain\'s details', function () {
@@ -187,7 +187,7 @@ describe('Ionic Template', function () {
             expect(page.getTabTitle()).toEqual('Form');
         });
 
-        xit('should save form when user click on save button', function () {
+        it('should save form when user click on save button', function () {
             var age = '22';
             var email = 'm.pietrzak93@yahoo.com';
             var gender = 'Male';
@@ -207,6 +207,6 @@ describe('Ionic Template', function () {
             formPage.clickSaveButton();
 
             expect(formPage.getSavedContactForm()).toContain(note);
-        }).pend('Need to be fixed. Test fails on CI.');
+        });
     });
 });
