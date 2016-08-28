@@ -64,7 +64,7 @@ describe('Ionic Template', function () {
             expect(page.getTabTitle()).toEqual('New todo');
         });
 
-        it('should add new todo when user click on add button', function () {
+        xit('should add new todo when user click on add button', function () {
             var todoName = 'Programming!';
             var todoType = 'Science';
             var todoEstimatedTime = '6 h';
@@ -82,7 +82,7 @@ describe('Ionic Template', function () {
             var todosListPage = require('./pages/todosListPage.js');
 
             expect(todosListPage.isRowForNamePresent(todoName)).toBeTruthy();
-        });
+        }).pend('Test fails on Firefox because Firefox does not support input with "date" type.');
     });
 
     describe('json', function () {
@@ -139,7 +139,7 @@ describe('Ionic Template', function () {
             expect(mountainsListPage.isMountainPresent(mountainName)).toBeFalsy();
         });
 
-        it('should reorder mountains when user drag and drop mountain', function () {
+        xit('should reorder mountains when user drag and drop mountain', function () {
             var startMountain = 'Mount Everest';
             var endMountain = 'Shishapangma';
 
@@ -150,7 +150,7 @@ describe('Ionic Template', function () {
             mountainsListPage.dragAndDropMountain(startMountain, endMountain);
 
             expect(mountainsListPage.getMountainNameForRow(11)).toContain(startMountain);
-        });
+        }).pend('Test fails on CI.');
     });
 
     describe('mountain\'s details', function () {
