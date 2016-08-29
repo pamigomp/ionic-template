@@ -135,6 +135,7 @@ describe('Ionic Template', function () {
 
             mountainsListPage.clickGlobalDeleteButton();
             mountainsListPage.clickDeleteButtonForMountain(mountainName);
+            mountainsListPage.clickGlobalDeleteButton();
 
             expect(mountainsListPage.isMountainPresent(mountainName)).toBeFalsy();
         });
