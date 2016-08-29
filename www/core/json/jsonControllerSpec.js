@@ -20,7 +20,7 @@ describe("JsonController", function () {
     });
 
     it("should contain json array - HTTP 200", function () {
-        httpBackend.expectGET("assets/data/data.json").respond("[{\"name\": \"ionic-template\",\"author\": \"Michal Pietrzak\",\"date\": \"2016-05-23T12:12:12.000000Z\", \"version\": \"0.0.1\"}]");
+        httpBackend.expectGET("assets/data/data.json").respond("[{\"name\": \"ionic-template\",\"author\": \"Michal Pietrzak\",\"date\": \"2016-05-23T12:12:12.000000Z\", \"version\": \"0.0.2\"}]");
         httpBackend.flush();
 
         expect(vm.json).toEqual([
@@ -28,7 +28,7 @@ describe("JsonController", function () {
                 "name": "ionic-template",
                 "author": "Michal Pietrzak",
                 "date": "2016-05-23T12:12:12.000000Z",
-                "version": "0.0.1"
+                "version": "0.0.2"
             }
         ]);
     });
